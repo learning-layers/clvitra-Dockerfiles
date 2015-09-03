@@ -1,0 +1,10 @@
+clvitradata:
+    container_name: clvitra-data
+    image: learninglayers/clvitra-data
+    env_file:
+        - common.env
+clvitra:
+   container_name: clvitra
+   image: learninglayers/clvitra
+    env_file:
+        - common.env
