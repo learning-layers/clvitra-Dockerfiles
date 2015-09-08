@@ -1,10 +1,14 @@
 clvitradata:
     container_name: clvitra-data
-    image: learninglayers/clvitra-data
+    image: learninglayers/clvitra-data:0.4.0
     env_file:
         - common.env
 clvitra:
-   container_name: clvitra
-   image: learninglayers/clvitra
+    container_name: clvitra
+    image: learninglayers/clvitra:0.4.0
+    volumes_from:
+        - clvitradata
     env_file:
         - common.env
+    links:
+        - mysql
