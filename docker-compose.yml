@@ -6,7 +6,7 @@ clvitradata:
         - services/clvitra/clvitra.env
 clvitra:
     container_name: clvitra
-    image: learninglayers/clvitra:0.0.5
+    image: learninglayers/clvitra:0.0.6
     volumes_from:
         - clvitradata
     env_file:
