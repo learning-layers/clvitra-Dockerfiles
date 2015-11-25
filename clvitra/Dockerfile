@@ -1,4 +1,4 @@
-FROM learninglayers/tomcat
+FROM learninglayers/tomcat:7.0.65
 MAINTAINER Petru Nicolaescu <nicolaescu<at>dbis.rwth-aachen.de>
 
 # Add the war from Jenkins
