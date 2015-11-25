@@ -1,4 +1,5 @@
 CREATE DATABASE IF NOT EXISTS clvitra;
+USE `clvitra`;
 CREATE TABLE IF NOT EXISTS `clvitra`.`video` (
   `ID` VARCHAR(100) NOT NULL,
   `Name` TEXT NOT NULL,

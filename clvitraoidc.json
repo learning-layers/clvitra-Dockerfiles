@@ -1,0 +1,16 @@
+{
+	"application_type": "web",
+	"client_name": "ClViTra",
+	"client_uri": "http://clvitra.rwth-aachen.de",
+	"logo_uri": "LAYERS_API_URIachrails/oidc_logo.png",
+	"token_endpoint_auth_method": "client_secret_basic",
+	"redirect_uris": ["LAYERS_API_URIclvitra/"],
+	"grant_types": [
+		"authorization_code",
+		"refresh_token"
+	],
+	"response_types": [
+		"code"
+	],
+	"scope": ["openid", "offline_access", "email", "profile"]
+}

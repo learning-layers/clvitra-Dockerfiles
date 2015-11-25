@@ -6,13 +6,12 @@ ADD clvitra/ /etc/clvitra
 
 CMD sed -i "s#LAYERS_API_URI#${LAYERS_API_URI}#g" /etc/clvitra/base.properties && \
 
-	sed -i "s#DB_USERNAME#${DB_USERNAME}#g" /etc/clvitra/dbconnection.properties && \
-	sed -i "s#DB_PASS#${DB_PASS}#g" /etc/clvitra/dbconnection.properties && \
+	sed -i "s#CLVITRA_DB_NAME#${CLVITRA_DB_NAME}#g" /etc/clvitra/dbconnection.properties && \
+	sed -i "s#CLVITRA_DB_USER#${CLVITRA_DB_USER}#g" /etc/clvitra/dbconnection.properties && \
+	sed -i "s#CLVITRA_DB_PASS#${CLVITRA_DB_PASS}#g" /etc/clvitra/dbconnection.properties && \
 	
-	sed -i "s#TETHYS_USER#${TETHYS_USER}#g" /etc/clvitra/objectStore.properties && \
-	sed -i "s#TETHYS_PASS#${TETHYS_PASS}#g" /etc/clvitra/objectStore.properties && \
+	sed -i "s#LAYERS_API_URI#${LAYERS_API_URI}#g" /etc/clvitra/oidc.properties && \	
+	sed -i "s#CLVITRA_OIDC_CLIENT_ID#${CLVITRA_OIDC_CLIENT_ID}#g" /etc/clvitra/oidc.properties && \
+	sed -i "s#CLVITRA_OIDC_CLIENT_SECRET#${CLVITRA_OIDC_CLIENT_SECRET}#g" /etc/clvitra/oidc.properties
 	
-	sed -i "s#CLIENT_ID#${CLIENT_ID}#g" /etc/clvitra/oidc.properties && \
-	sed -i "s#CLIENT_SECRET#${CLIENT_SECRET}#g" /etc/clvitra/oidc.properties
-	
-VOLUME ["/etc/clvitra"]
+VOLUME ["/etc/clvitra","/etc/sql/"]
