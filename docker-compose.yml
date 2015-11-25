@@ -10,5 +10,8 @@ clvitra:
         - clvitradata
     env_file:
         - common.env
+        - clvitra.env
     links:
         - mysql
+	actions:
+        - create_databases: [clvitra.env]
