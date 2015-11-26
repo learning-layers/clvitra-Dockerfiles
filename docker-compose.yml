@@ -14,6 +14,6 @@ clvitra:
         - services/clvitra/clvitra.env
     links:
         - mysql
-	actions:
+    actions:
         - create_databases: [clvitra.env]
         - create_oidcclients: [clvitra.env]
